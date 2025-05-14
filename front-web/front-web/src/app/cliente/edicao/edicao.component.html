@@ -1,0 +1,64 @@
+<div class="container mt-5">
+  <h2 class="mb-4 text-center">Edição de Cliente</h2>
+
+  <form class="mx-auto" style="max-width: 600px" (ngSubmit)="salvar()">
+    <div class="mb-3">
+      <label for="nome" class="form-label">Nome:</label>
+      <input
+        id="nome"
+        name="nome"
+        type="text"
+        class="form-control"
+        [(ngModel)]="cliente.nome"
+      />
+    </div>
+
+    <div class="mb-3">
+      <label for="endereco" class="form-label">Endereço:</label>
+      <input
+        id="endereco"
+        name="endereco"
+        type="text"
+        class="form-control"
+        [(ngModel)]="cliente.endereco"
+      />
+    </div>
+
+    <div class="mb-3">
+      <label for="cnpj" class="form-label">CNPJ:</label>
+      <input
+        id="cnpj"
+        name="cnpj"
+        type="text"
+        class="form-control"
+        [(ngModel)]="cliente.cnpj"
+      />
+    </div>
+
+    <div class="mb-3">
+      <label for="telefone" class="form-label">Telefone:</label>
+      <input
+        id="telefone"
+        name="telefone"
+        type="text"
+        class="form-control"
+        [(ngModel)]="cliente.telefone"
+      />
+    </div>
+
+    <div class="mb-3">
+      <label for="email" class="form-label">Email:</label>
+      <input
+        id="email"
+        name="email"
+        type="email"
+        class="form-control"
+        [(ngModel)]="cliente.email"
+      />
+    </div>
+
+    <div class="text-center">
+      <button type="submit" class="btn btn-success">Salvar</button>
+    </div>
+  </form>
+</div>
