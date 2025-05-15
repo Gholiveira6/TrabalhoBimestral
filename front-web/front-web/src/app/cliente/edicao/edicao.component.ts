@@ -1,13 +1,13 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { ClienteService } from '../cliente.service';
 import { Cliente } from '../cliente.model';
 
 @Component({
   selector: 'app-edicao',
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, RouterLink],
   templateUrl: './edicao.component.html',
   styleUrl: './edicao.component.css',
 })
@@ -25,7 +25,7 @@ export class EdicaoComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private router: Router,
-    private clienteService: ClienteService
+    private clienteService: ClienteService,
   ) {}
 
   ngOnInit(): void {

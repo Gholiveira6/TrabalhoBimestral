@@ -3,11 +3,11 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Cliente } from '../cliente.model';
 import { ClienteService } from '../cliente.service';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-cadastro',
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, RouterLink],
   templateUrl: './cadastro.component.html',
   styleUrl: './cadastro.component.css',
 })
@@ -21,7 +21,10 @@ export class CadastroComponent {
     email: '',
   };
 
-  constructor(private clienteService: ClienteService, private router: Router) {}
+  constructor(
+    private clienteService: ClienteService,
+    private router: Router,
+  ) {}
 
   salvar() {
     this.clienteService.cadastrarCliente(this.cliente).subscribe(() => {
